@@ -1,0 +1,16 @@
+<script src="../Cryptojs/crypto-js.js"></script>
+<script>
+// at this point http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js should be loaded
+
+var data = 'Project',
+    password = 'abc123';
+
+var hash = CryptoJS.SHA1("Project");
+
+alert("'Project '"+ " : "+hash);
+
+var hash2 = CryptoJS.SHA1("Project ");
+
+alert("'Project '"+ " : "+hash2);
+
+</script>

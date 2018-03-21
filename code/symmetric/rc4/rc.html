@@ -1,0 +1,17 @@
+<script src="../Cryptojs/crypto-js.js"></script>
+<script>
+// at this point http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js should be loaded
+
+var data = 'Project',
+    password = 'abc123';
+
+var encrypted = CryptoJS.RC4.encrypt(data, password).toString();
+
+console.log(encrypted);
+// => 'U2FsdGVkX1/HCMoOOJDZXy+BQy9fIlZOZ3doksR+blM='
+
+var decrypted = CryptoJS.RC4.decrypt(encrypted, password).toString(CryptoJS.enc.Utf8);
+
+console.log(decrypted);
+// => 'a JSON blob or something'
+</script>
